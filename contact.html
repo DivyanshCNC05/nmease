@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== Background Section ===== */
+    #contact {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e8dfca, #d3c9b6);
+      padding: 50px 20px;
+    }
+
+    /* ===== Contact Card ===== */
+    .contact-container {
+      max-width: 700px;
+      text-align: center;
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .contact-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #0e3458;
+      position: relative;
+      display: inline-block;
+    }
+
+    .contact-container h1::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: #0e3458;
+      display: block;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    .contact-container p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* ===== Form Styling ===== */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #0e3458;
+      outline: none;
+      box-shadow: 0 0 5px rgba(14, 52, 88, 0.3);
+    }
+
+    .contact-form button {
+      background: #0e3458;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #333;
+    }
+
+    /* ===== Contact Info ===== */
+    .contact-info {
+      margin-top: 30px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* ===== Map Styling ===== */
+    .map {
+      width: 100%;
+      height: 300px;
+      margin-top: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ===== Social Links ===== */
+    .social-links {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin: 0 8px;
+      border-radius: 50%;
+      background: #0e3458;
+      transition: 0.3s;
+    }
+
+    .social-links a img {
+      width: 20px;
+      height: 20px;
+      filter: invert(1); /* makes icons white */
+    }
+
+    .social-links a:hover {
+      background: #333;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="contact">
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Fill out the form below or reach us directly.</p>
+
+      <!-- ===== Contact Form ===== -->
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- ===== Contact Info ===== -->
+      <div class="contact-info">
+        <p><strong>Email:</strong> hello@example.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+      </div>
+
+      <!-- ===== Google Map ===== -->
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.790539150507!2d75.95106231500929!3d22.972009379350606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f6f9f0a6e4a9%3A0x7c93e12e444e6ee6!2sDewas%2C%20Madhya%20Pradesh%20455001%2C%20India!5e0!3m2!1sen!2sin!4v1694600000000!5m2!1sen!2sin" 
+          allowfullscreen 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- ===== Social Media Links ===== -->
+      <div class="social-links">
+        <a href="https://instagram.com/yourhandle" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://x.com/yourhandle" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X">
+        </a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
