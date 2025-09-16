@@ -155,30 +155,135 @@ body {
     max-width: 100vw;
     position: relative;
 }
-#page4{
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background-color: #0e3458;
-    font-family: a;
+      /* Section with background image */
+.hero-section {
+  background: url('Technology-background-07B.webp') no-repeat center center/cover;
+  position: relative;
+  z-index: 0; /* ensures overlay works properly */
+  padding: 60px 20px;
+  min-height: 500px; /* make sure section is tall enough to show the bg */
 }
-#page4>h3{
-    margin-left: 15vw;
-    margin-bottom: 2vw;
-    font-weight: 100;
-    color: var(--text-light);
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background: rgba(14, 52, 88, 0.65); /* overlay for readability */
+  z-index: -1;
 }
-#page4>h1{
-    margin-left: 15vw;
-    width: 70%;
-    font-size: 3vw;
-    font-weight: 100;
-    color: rgba(255,255,255,0.5);
+
+
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      position: relative; /* keep content above overlay */
+      z-index: 2;
+    }
+
+    .text-column {
+      flex: 1;
+      min-width: 300px;
+      padding-right: 40px;
+    }
+
+    .text-column h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+    }
+
+    .text-column p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      color: #FFFFFF;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 18px;
+      margin-right: 15px;
+      border-radius: 20px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #e8dfca;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background: #d6c7a6;
+    }
+
+    .btn-secondary {
+      background: #e8dfca;
+      color: black;
+    }
+
+    .btn-secondary:hover {
+      background: #d6c7a6;
+    }
+
+    .image-column {
+      flex: 1;
+      min-width: 370px;
+      min-height: 320px;
+      text-align: center;
+    }
+
+    .image-column img {
+      max-width: 500px;
+      height: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .text-column {
+        padding-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+
+    /* Logos Section */
+  .col-12 {
+    background-color: #bdb4d5;
+  }
+
+
+    .logo-img {
+  height: 40px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  display: block;
+  margin: 0 auto; /* centers logos inside col */
 }
+
+.logo-img:hover {
+  opacity: 1;
+}
+
+
+
+
 #page5{
     position: relative;
     height: 100vh;
@@ -190,30 +295,74 @@ body {
     max-width: 100vw;
     max-height: 100vh;
 }
-#page6{
+
+/* About Us Section */
+#about-us {
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+}
+
+/* Center "Our Team's Results" */
+#about-us h3 {
+    display: block;
+    margin: 0 auto 2rem auto;
+    font-size: 2rem;
+}
+
+/* Result Cards */
+.result-card {
+    background: linear-gradient(135deg, #1a237e, #3f51b5);
     display: flex;
-    align-items: start;
-    justify-content: center;
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background-color: #0e3458;
     flex-direction: column;
-    font-family: a;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-#page6>h3{
-    margin-left: 15vw;
-    font-weight: 100;
-    color: var(--text-light);
-    margin-bottom: 2vw;
+
+/* Card content */
+.result-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
-#page6>h1{
-    margin-left: 15vw;
-    font-size: 3vw;
-    width: 70%;
-    font-weight: 100;
-    color: rgba(255,255,255,0.3);
+.result-card p {
+    font-size: 1rem;
+    margin: 0;
 }
+
+/* Hover effect */
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* 5 Cards per row */
+#about-us .row {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#about-us .row > .col {
+    flex: 1 1 calc(20% - 1rem);
+    max-width: calc(20% - 1rem);
+    display: flex;
+}
+
+#about-us .row > .col .result-card {
+    flex: 1;
+}
+
+
+
+
+
+
+
 #page7{
     position: relative;
     height: 100vh;
