@@ -295,8 +295,47 @@
 
         <!-- write code from hero  -->
 
-        <div id="page8">
-            
+        <div id="page8"></div>
+
+        <div class="container-fluid Service-main">
+            <div class="services-section">
+                <h1 class="text-center">Our Services</h1>
+                <div class="container">
+
+                    <img src="Screenshot 2025-09-16 174901.png " alt="">
+
+                   <!-- <div class="service-img">
+                     <img src="Nmease-service.png" alt="">
+                   </div>
+
+                    <div class="service-card">
+                    <div class="row">
+                        <div class="col-4">
+                             <div class="result-card gradient-blue-1">
+                                <div class="result-icon"><i class="bi bi-calendar3"></i></div>
+                            <div class="result-title">Mobile Development</div>
+                            <div class="result-description">Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident.</div>
+                        </div> 
+                        </div>
+                         <div class="col-4">
+                           <div class="result-card gradient-blue-1">
+                            <div class="result-icon"><i class="bi bi-calendar3"></i></div>
+                            <div class="result-title">Mobile Development</div>
+                            <div class="result-description">Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident.</div>
+                        </div>                            
+                        </div>
+                         <div class="col-4">
+                            <div class="result-card gradient-blue-1">
+                                <div class="result-icon"><i class="bi bi-calendar3"></i></div>
+                            <div class="result-title">Mobile Development</div>
+                            <div class="result-description">Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident.</div>
+                        </div>                            
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+                
+            </div>
         </div>
 
         <div id="page9">
@@ -332,37 +371,25 @@
         </div>
 
         <div id="page11">
-            <h1>Recent Blog</h1>
-            <div class="page11-inner">
-                <div class="left11">
-                    <img src="https://thisismagma.com/wp-content/uploads/2023/05/thisismagma.com-magma-a-la-3eme-edition-du-tech-talk-de-cbre-france-1684942208038.jpeg"
-                        alt="">
-                </div>
-                <div class="right11">
-                    <h4>MAY 30,2023</h4>
-                    <h1>Magma At CBRE France's 3rd Tech Talk</h1>
-                </div>
-            </div>
-            <div class="page11-inner">
-                <div class="left11">
-                    <img src="https://thisismagma.com/wp-content/uploads/2023/05/thisismagma.com-workshop-blockchain-et-actif-digitaux-sba-16-min-scaled.jpg"
-                        alt="">
-                </div>
-                <div class="right11">
-                    <h4>MAY 30,2023</h4>
-                    <h1>Magma At CBRE France's 3rd Tech Talk</h1>
-                </div>
-            </div>
-            <div class="page11-inner">
-                <div class="left11">
-                    <img src="https://thisismagma.com/wp-content/uploads/2023/03/magma.wp2.cubdev.com-exploring-the-potential-of-real-estate-tokenization-digital-twins-magma.png"
-                        alt="">
-                </div>
-                <div class="right11">
-                    <h4>MAY 30,2023</h4>
-                    <h1>Magma At CBRE France's 3rd Tech Talk</h1>
-                </div>
-            </div>
+        <section class="stats-section">
+    <div class="container">
+      <h2>On average, our clients achieve:</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="stat-value" data-target="53" data-suffix="%">0%</div>
+          <div class="stat-label">Reduction in Processing<br>Times and Defects</div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-value" data-target="61" data-suffix="%">0%</div>
+          <div class="stat-label">Increase in<br>Production</div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-value" data-target="213" data-suffix="K">$0K</div>
+          <div class="stat-label">Savings<br>Per Project</div>
+        </div>
+      </div>
+    </div>
+  </section>
         </div>
 
         <div id="page12">
@@ -413,6 +440,32 @@
     <script>
         AOS.init();
     </script>
+
+     <!-- Counter Script -->
+  <script>
+    const counters = document.querySelectorAll('.stat-value');
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const currentText = counter.innerText.replace(/[^0-9.]/g, '');
+        const count = +currentText;
+
+        const increment = target / 60; // 60 steps for smooth animation
+
+        if (count < target) {
+          counter.innerText = (Math.ceil(count + increment)) + suffix;
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target + suffix;
+        }
+      };
+
+      // Start counting on load
+      updateCount();
+    });
+  </script>
 </body>
 
 </html>
