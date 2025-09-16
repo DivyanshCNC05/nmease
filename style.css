@@ -163,19 +163,10 @@ body {
   position: relative;
   z-index: 0; /* ensures overlay works properly */
   padding: 60px 20px;
-  height: 100%; /* make sure section is tall enough to show the bg */
+  height: 100vh; /* make sure section is tall enough to show the bg */
 }
 
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0;
 
-  z-index: -1;
-}
 
 
 
@@ -191,6 +182,7 @@ body {
     }
 
     .text-column {
+        padding-top: 10rem;
       flex: 1;
       min-width: 300px;
       padding-right: 40px;
@@ -240,6 +232,7 @@ body {
     }
 
     .image-column {
+        padding-top: 8rem;
       flex: 1;
       min-width: 370px;
       min-height: 320px;
@@ -312,14 +305,20 @@ body {
 }
 
 /* Section Heading */
-#about-us h2 {
+#about-us h2 span {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;   /* force centering */
-    color: blue;          /* make text white */
+    color: #172682;          /* make text white */
+    border-bottom: 5px solid #6699ff;
+    padding-bottom: 5px;
+}
+
+#about-us h2{
+    margin-bottom: 3rem;
 }
 .crd-section{
-    background-color: #ffffff;
+    background-color: white;
 }
 
 
