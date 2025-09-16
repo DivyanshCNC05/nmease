@@ -159,11 +159,11 @@ body {
 }
       /* Section with background image */
 .hero-section {
-  background: url('Technology-background-07B.webp') no-repeat center center/cover;
+  background: url('Technology-background-07B.png') no-repeat center center/cover;
   position: relative;
   z-index: 0; /* ensures overlay works properly */
   padding: 60px 20px;
-  min-height: 500px; /* make sure section is tall enough to show the bg */
+  height: 100%; /* make sure section is tall enough to show the bg */
 }
 
 .hero-section::before {
@@ -173,13 +173,13 @@ body {
   left: 0; 
   right: 0; 
   bottom: 0;
-  background: rgba(14, 52, 88, 0.65); /* overlay for readability */
+
   z-index: -1;
 }
 
 
 
-    .container {
+    .hero-main {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -269,7 +269,7 @@ body {
  /* Logo styling */
 
 .logos {
-    background-color:#e8dfca ;
+    background-color:#ffffff ;
 }
 
 .logo-img {
@@ -328,7 +328,7 @@ body {
 .result-card {
     background: linear-gradient(135deg, #1a237e, #3f51b5);
     display: flex;
-    border-radius: 3%;
+    border-radius: 15px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -661,7 +661,7 @@ body {
     color: var(--text-dark); /* text turns black */
 }
 .aboutgy{
-    background-color: #f0eee7;
+    background-color: #ffffff;
     color: #2d2b2b;
     padding-bottom: 100px;
 }
@@ -673,8 +673,20 @@ body {
     padding-bottom: 20px;
 }
 .mission-img img{
+    height: 350px;
+    width: 520px;
+ 
     margin-top: 40px;
-    border-radius: 3%;
+    border-radius: 15px;
+   margin-left: 50px;
+}
+.gradient-blue-1{
+background: #16257F;
+background: linear-gradient(180deg, rgba(22, 37, 127, 1) 50%, rgba(25, 40, 81, 1) 100%);
+}
+.gradient-blue-2{
+  background: #6496FA;
+background: linear-gradient(181deg, rgba(100, 150, 250, 1) 50%, rgba(55, 83, 128, 1) 100%);
 }
 /* #contact {
   min-height: 100vh;
