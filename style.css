@@ -131,7 +131,7 @@ body {
     position: relative;
     padding: 0vw 8vw;
     color: var(--text-light);
-    background-color:#0e3458;
+    background-color:#e8dfca;
 }
 #page2>h2{
     margin-bottom: 3vw;
@@ -264,22 +264,28 @@ body {
     }
 
     /* Logos Section */
-  .col-12 {
-    background-color: #bdb4d5;
-  }
+ /* Logo styling */
 
-
-    .logo-img {
-  height: 40px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-  display: block;
-  margin: 0 auto; /* centers logos inside col */
+.logos {
+    background-color:#e8dfca ;
 }
 
+.logo-img {
+  height: 48px;
+  opacity: 0.8;
+  filter: grayscale(100%);          /* black & white by default */
+  transition: opacity 0.3s ease, 
+              filter 0.3s ease;     /* smooth hover effect */
+  display: block;
+  margin: 0 auto;                   /* centers logos inside col */
+}
+
+/* Hover effect: color + full opacity */
 .logo-img:hover {
   opacity: 1;
+  filter: grayscale(0%);            /* restore original color */
 }
+
 
 
 
@@ -288,7 +294,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: #0a3cce;
+    background-color: #d3d3d6;
 }
 #page5>canvas{
     position: relative;
@@ -302,12 +308,14 @@ body {
     text-align: center;
 }
 
-/* Center "Our Team's Results" */
-#about-us h3 {
-    display: block;
-    margin: 0 auto 2rem auto;
+/* Section Heading */
+#about-us h2 {
     font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;   /* force centering */
+    color: #fff;          /* make text white */
 }
+
 
 /* Result Cards */
 .result-card {
@@ -323,13 +331,13 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Card content */
-.result-card h4 {
+/* Card Title & Description */
+.result-title {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
-.result-card p {
+.result-description {
     font-size: 1rem;
     margin: 0;
 }
@@ -346,16 +354,15 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
 }
-
-#about-us .row > .col {
+#about-us .row > div {
     flex: 1 1 calc(20% - 1rem);
     max-width: calc(20% - 1rem);
     display: flex;
 }
-
-#about-us .row > .col .result-card {
+#about-us .row > div .result-card {
     flex: 1;
 }
+
 
 
 
