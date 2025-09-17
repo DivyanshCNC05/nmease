@@ -22,7 +22,7 @@ body {
 #main{
     position: relative;
     overflow: hidden;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
 }
 @font-face {
     font-family: a;
@@ -190,16 +190,16 @@ body {
 
     .text-column h1 {
       font-size: 2.8rem;
-      font-weight: bold;
+      
       margin-bottom: 20px;
-      color: #FFFFFF;
+      color: #000000;
     }
 
     .text-column p {
       font-size: 1.1rem;
       margin-bottom: 30px;
       line-height: 1.6;
-      color: #FFFFFF;
+      color: #1d1c1c;
     }
 
     .btn {
@@ -655,11 +655,13 @@ body {
     background-color: #ffffff;
     color: #2d2b2b;
     padding-bottom: 100px;
+    margin-top: 12rem;
 }
 .mission{
     margin-top: 80px;
 }
 .mission .heas{
+    padding-top: 4rem;
     color: #0e3458;
     padding-bottom: 20px;
 }
@@ -671,6 +673,7 @@ body {
     border-radius: 15px;
    margin-left: 50px;
 }
+
 .gradient-blue-1{
 background: #16257F;
 background: linear-gradient(180deg, rgba(22, 37, 127, 1) 50%, rgba(25, 40, 81, 1) 100%);
@@ -804,6 +807,57 @@ background: linear-gradient(181deg, rgba(100, 150, 250, 1) 50%, rgba(55, 83, 128
    .navbar-large{
     display: none;
    }
+   .hero-row{
+    display: flex;
+    flex-direction: column;
+   }
+    .text-column h1 {
+      font-size: 2.8rem;
+      text-align: left;
+      margin-bottom: 30px;
+     
+    }
+     .text-column p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: left;
+    }
+     .btn {
+      margin-bottom: 20px;
+    }
+     .text-column {
+        padding-top: 1rem;
+     }
+       .image-column {
+        padding-top: 1rem;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+     
+    }
+    .image-column img {
+      margin-left: rem;
+      width: 300px;
+      height: 210px;
+     
+    }
+    .logos {
+    margin-top: 10rem;
+   }
+   .about-row{
+    display: flex;
+    flex-direction: column;
+   }
+   .mission{
+    margin-top: 40px;
+    width: 100%;
+  }
+  .mission .heas{
+    
+   font-size: 1.5rem;
+}
+
 }
 
 
