@@ -58,10 +58,10 @@ body {
     background-color: #e8dfca;
 }
 #page1>nav>img{
-    margin-top: 10px;
+    margin-top: 100px;
     padding-left: 0%;
-    width: 15%;
-    height: 15rem;
+    width: 12%;
+    height: 13rem;
 }
 #right-nav>button{
     padding: 10px 20px;
@@ -369,14 +369,6 @@ body {
 #about-us .row > div .result-card {
     flex: 1;
 }
-
-
-
-
-
-
-
-
 #page7{
     position: relative;
     height: 100vh;
@@ -776,3 +768,54 @@ background: linear-gradient(181deg, rgba(100, 150, 250, 1) 50%, rgba(55, 83, 128
 .testimonial{
     background-color: #FFFFFF;
 }
+
+@media only screen   
+  and (min-device-width : 320px)   
+  and (max-device-width : 640px)  
+  { 
+    #page1>nav>img{
+    margin-top: 10px;
+    padding: 0;
+    width: 26%;
+    height: 8rem;
+  }
+  #page1>nav{
+    padding: 0px 30px;
+    }
+    #right-nav>button{
+    padding: 7px 12px;
+    border-radius: 50px;
+    background-color: #0e3458;
+    border: 1px solid var(--text-light);
+    color: #FFFFFF;
+    font-family: a;
+    font-size: 12px;
+}
+   
+   #page2>h2{
+    margin-bottom: 7vw;
+    font-weight: 100;
+    color: #232D3F;
+}
+#page2>h1{
+    
+    font-size: 8vw;
+   }
+   .navbar-large{
+    display: none;
+   }
+}
+
+
+
+
+
+
+  @media only screen   
+  and (min-width: 1030px)   
+  and (max-width: 1605px)  
+  { 
+    .navbar-small{
+        display: none;
+    }
+  }
