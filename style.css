@@ -661,7 +661,7 @@ body {
     margin-top: 80px;
 }
 .mission .heas{
-    padding-top: 4rem;
+    padding-top: 5rem;
     color: #0e3458;
     padding-bottom: 20px;
 }
@@ -879,3 +879,11 @@ background: linear-gradient(181deg, rgba(100, 150, 250, 1) 50%, rgba(55, 83, 128
         display: none;
     }
   }
+
+
+
+  .hero-logo img{
+    width: 55%;
+    aspect-ratio: 3/2;
+    object-fit: contain
+}
