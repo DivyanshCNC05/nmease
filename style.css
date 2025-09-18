@@ -811,6 +811,9 @@ background: linear-gradient(181deg, rgba(100, 150, 250, 1) 50%, rgba(55, 83, 128
     display: flex;
     flex-direction: column;
    }
+   .text-column{
+    text-align: left;
+   }
     .text-column h1 {
       font-size: 2.8rem;
       text-align: left;
@@ -823,28 +826,31 @@ background: linear-gradient(181deg, rgba(100, 150, 250, 1) 50%, rgba(55, 83, 128
       line-height: 1.6;
       text-align: left;
     }
-     .btn {
+    .text-column .btn {
+      align-items: start;
       margin-bottom: 20px;
     }
      .text-column {
         padding-top: 1rem;
      }
        .image-column {
-        padding-top: 1rem;
+        padding-top: 0%;
         padding-left: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
      
     }
     .image-column img {
-      margin-left: rem;
       width: 300px;
       height: 210px;
      
     }
     .logos {
-    margin-top: 10rem;
+    margin-top: 15rem;
    }
+   
    .about-row{
     display: flex;
     flex-direction: column;
