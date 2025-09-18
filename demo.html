@@ -1,25 +1,1434 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>title</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
 <body>
+  <style>
+    /* 🎨 Define Theme Colors */
+    :root {
+      --primary-color: #102A71;
+      /* Main dark */
+      --secondary-color: #232D3F;
+      /* Dark gray-blue */
+      --accent-color: #e5e7e8;
+      /* Highlight turquoise */
+      --background-color: #F9F9F9;
+      /* Light background */
+      --text-light: #FFFFFF;
+      /* White text */
+      --text-dark: #000000;
+      /* Dark text */
+    }
+
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    #main {
+      position: relative;
+      overflow: hidden;
+      /* background-color: var(--primary-color); */
+    }
+
+    @font-face {
+      font-family: a;
+      src: url(./jost-variable.ttf);
+    }
+
+    @font-face {
+      font-family: b;
+      src: url(./KFOlCnqEu92Fr1MmEU9fBBc4\ \(1\).ttf);
+    }
+
+    @font-face {
+      font-family: c;
+      src: url(./KFOmCnqEu92Fr1Mu4mxK\ \(1\).ttf);
+    }
+
+    #page1 {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      background-color: #e8dfca;
+    }
+
+    #page1>video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #page1>nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 30px;
+      position: absolute;
+      height: 14vh;
+      width: 100vw;
+      background-color: #e8dfca;
+    }
+
+    #page1>nav>img {
+      margin-top: 15px;
+      padding-left: 0%;
+      width: 10%;
+      height: 10rem;
+    }
+
+    #right-nav>button {
+      padding: 10px 20px;
+      border-radius: 50px;
+      background-color: #0e3458;
+      border: 1px solid var(--text-light);
+      color: #FFFFFF;
+      font-family: a;
+      font-size: 15px;
+    }
+
+    .bottom-page1 {
+      position: absolute;
+      bottom: 15%;
+      height: 35vh;
+      width: 50vw;
+      left: 10%;
+    }
+
+    .bottom-page1>h1 {
+      font-family: a;
+      font-size: 5vw;
+      font-weight: 100;
+      line-height: 1;
+      color: #0e3458;
+    }
+
+    .bottom-page1-inner {
+      position: absolute;
+      bottom: 0%;
+      height: 35%;
+      width: 100%;
+
+    }
+
+    .bottom-page1-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: a;
+
+    }
+
+    .bottom-page1-inner>h4 {
+      color: #8a8a8a;
+    }
+
+
+    .bottom-page1-inner>button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      background-color: #0e3458;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-family: b;
+    }
+
+    .bottom-page1-inner>h4 {
+      font-size: 1.3vw;
+      font-weight: 100;
+      color: var(--text-light);
+    }
+
+    #page2 {
+      display: flex;
+      align-items: start;
+      font-family: a;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      padding: 0vw 8vw;
+      color: var(--text-light);
+      background-color: #c1b089;
+      color: #232D3F;
+    }
+
+    #page2>h2 {
+      margin-bottom: 3vw;
+      font-weight: 100;
+      color: #232D3F;
+    }
+
+    #page2>h1 {
+      font-weight: 100;
+      line-height: 1.3;
+      width: 90%;
+      font-size: 4vw;
+      color: #0e3458;
+    }
+
+    #page3 {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    #page3>canvas {
+      max-height: 100vh;
+      max-width: 100vw;
+      position: relative;
+    }
+
+    /* Section with background image */
+    .hero-section {
+      background: url('Technology-background-07B.png') no-repeat center center/cover;
+      position: relative;
+      z-index: 0;
+      /* ensures overlay works properly */
+      padding: 60px 20px;
+      height: 100vh;
+      /* make sure section is tall enough to show the bg */
+    }
 
 
 
 
 
-<script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+    .hero-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      position: relative;
+      /* keep content above overlay */
+      z-index: 2;
+    }
+
+    .text-column {
+      padding-top: 10rem;
+      flex: 1;
+      min-width: 300px;
+      padding-right: 40px;
+    }
+
+    .text-column h1 {
+      font-size: 2.8rem;
+
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .text-column p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      color: #1d1c1c;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 18px;
+      margin-right: 15px;
+      border-radius: 20px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #e8dfca;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background: #d6c7a6;
+    }
+
+    .btn-secondary {
+      background: #e8dfca;
+      color: black;
+    }
+
+    .btn-secondary:hover {
+      background: #d6c7a6;
+    }
+
+    .image-column {
+      padding-top: 8rem;
+      flex: 1;
+      min-width: 370px;
+      min-height: 320px;
+      text-align: center;
+    }
+
+    .image-column img {
+      max-width: 500px;
+      height: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-column {
+        padding-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+
+    /* Logos Section */
+    /* Logo styling */
+
+    .logos {
+      background-color: #ffffff;
+    }
+
+    .logo-img {
+      height: 48px;
+      opacity: 0.8;
+      filter: grayscale(100%);
+      /* black & white by default */
+      transition: opacity 0.3s ease,
+        filter 0.3s ease;
+      /* smooth hover effect */
+      display: block;
+      margin: 0 auto;
+      /* centers logos inside col */
+    }
+
+    /* Hover effect: color + full opacity */
+    .logo-img:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+      /* restore original color */
+    }
+
+
+
+
+
+    #page5 {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      background-color: #d3d3d6;
+    }
+
+    #page5>canvas {
+      position: relative;
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+
+    /* About Us Section */
+    #about-us {
+      background-color: #ffffff;
+      font-family: 'Jost', sans-serif;
+      text-align: center;
+    }
+
+    /* Section Heading */
+    #about-us h2 span {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      /* force centering */
+      color: #172682;
+      /* make text white */
+      border-bottom: 5px solid #6699ff;
+      padding-bottom: 5px;
+    }
+
+    #about-us h2 {
+      margin-bottom: 3rem;
+    }
+
+    .crd-section {
+      background-color: white;
+    }
+
+
+
+    /* Result Cards */
+    .result-card {
+      background: linear-gradient(135deg, #1a237e, #3f51b5);
+      display: flex;
+      border-radius: 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 220px;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Card Title & Description */
+    .result-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .result-description {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* Hover effect */
+    .result-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 5 Cards per row */
+    #about-us .row {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    #about-us .row>div {
+      flex: 1 1 calc(20% - 1rem);
+      max-width: calc(20% - 1rem);
+      display: flex;
+    }
+
+    #about-us .row>div .result-card {
+      flex: 1;
+    }
+
+    #page7 {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      background-color: #0a3cce;
+      /* margin-bottom: 100px; */
+    }
+
+    #page7>canvas {
+      position: relative;
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+
+    .page7-cir {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9;
+      height: 30vw;
+      width: 30vw;
+      border-radius: 50%;
+      border: 1px solid var(--text-light);
+    }
+
+    .page7-cir-inner {
+      height: 70%;
+      width: 70%;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 1px solid var(--text-light);
+    }
+
+    #page8 {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--secondary-color);
+    }
+
+    #page8>video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .page8-bottom {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-family: a;
+    }
+
+    .page8-bottom>h1 {
+      color: var(--text-light);
+      margin-bottom: 2vw;
+      font-size: 5vw;
+      font-weight: 100;
+    }
+
+    .page8-bottom>button {
+      padding: 20px 30px;
+      border-radius: 50px;
+      border: none;
+      background-color: var(--accent-color);
+      color: black;
+    }
+
+    #page9 {
+      display: flex;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--secondary-color);
+    }
+
+    .left9 {
+      height: 100%;
+      width: 40%;
+      position: relative;
+      font-family: a;
+    }
+
+    .left9>h1 {
+      position: absolute;
+      top: 45%;
+      right: 12%;
+      transform: translateY(-50%);
+      font-size: 5vw;
+      font-weight: 100;
+      color: var(--text-light);
+      line-height: 1;
+    }
+
+    .right9 {
+      height: 100%;
+      width: 60%;
+      position: relative;
+    }
+
+    .right9-center {
+      height: 50%;
+      width: 85%;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(https://thisismagma.com/wp-content/uploads/2023/04/magma.wp2.cubdev.com-home-1.jpeg);
+      background-size: cover;
+      left: 0;
+    }
+
+    #page10 {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--secondary-color);
+    }
+
+    .right10 {
+      height: 100%;
+      width: 60%;
+      position: relative;
+      left: 40%;
+      top: 5%;
+    }
+
+    .right10-inner {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      height: 33.3%;
+      width: 100%;
+      font-family: a;
+      color: var(--text-light);
+    }
+
+    .right10-inner>h1 {
+      font-size: 2vw;
+    }
+
+    .right10-inner>p {
+      margin-top: 2vw;
+      font-size: 1.3vw;
+      width: 80%;
+    }
+
+    #page11 {
+      position: relative;
+      height: 110vh;
+      width: 100vw;
+      background-color: var(--background-color);
+      font-family: a;
+    }
+
+    #page11>h1 {
+      position: absolute;
+      top: 5%;
+      left: 10%;
+      font-size: 4vw;
+      color: var(--text-dark);
+      font-weight: 100;
+    }
+
+    .page11-inner {
+      display: flex;
+      top: 18%;
+      position: relative;
+      margin-bottom: 2vw;
+      height: 24%;
+      width: 100%;
+    }
+
+    .left11 {
+      position: relative;
+      height: 100%;
+      width: 40%;
+      left: 5%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .left11>img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .right11 {
+      padding-top: 5vw;
+      color: var(--text-dark);
+      left: 50%;
+      position: absolute;
+      height: 100%;
+      width: 50%;
+    }
+
+    .right11>h4 {
+      font-weight: 100;
+    }
+
+    .right11>h1 {
+      font-size: 2vw;
+    }
+
+    #page12 {
+      position: relative;
+      height: 70vh;
+      width: 100vw;
+      background-color: var(--primary-color);
+    }
+
+    .page12-inner {
+      position: absolute;
+      top: 30%;
+      right: 10%;
+      color: var(--text-light);
+      font-family: a;
+    }
+
+    .page12-inner>h1 {
+      font-size: 5vw;
+      font-weight: 100;
+    }
+
+    .page12-inner>p {
+      font-size: 1.3vw;
+    }
+
+    #page13 {
+      position: relative;
+      height: 50vh;
+      width: 100vw;
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      font-family: a;
+      padding: 2.5vw 10vw;
+    }
+
+    #page13>h1 {
+      font-size: 5vw;
+      line-height: 1;
+      font-weight: 100;
+    }
+
+    #page13>button {
+      padding: 18px 30px;
+      border: none;
+      background-color: var(--accent-color);
+      color: black;
+      border-radius: 50px;
+      margin-top: 2vw;
+    }
+
+    #page14 {
+      position: relative;
+      height: 50vh;
+      width: 100vw;
+      background-color: var(--primary-color);
+    }
+
+    .page14-inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0vw 5vw;
+      font-family: a;
+      height: 33.3%;
+      width: 100%;
+      color: var(--text-light);
+      border-top: .5px solid rgba(255, 255, 255, 0.36);
+      border-bottom: .5px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .page14-inner>i {
+      font-weight: 100;
+      font-size: 2.4vw;
+      position: relative;
+      z-index: 9999;
+    }
+
+    .page14-inner>h1 {
+      font-size: 3vw;
+      font-weight: 100;
+      position: relative;
+      z-index: 9999;
+    }
+
+    .center14 {
+      height: 0%;
+      width: 100%;
+      background-color: var(--accent-color);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all ease .5s;
+    }
+
+    .page14-inner:hover .center14 {
+      height: 100%;
+
+    }
+
+    .page14-inner:hover {
+      color: var(--text-dark);
+      /* text turns black */
+    }
+
+    .aboutgy {
+      background-color: #ffffff;
+      color: #2d2b2b;
+      padding-bottom: 100px;
+      margin-top: 12rem;
+    }
+
+    .mission {
+      margin-top: 80px;
+    }
+
+    .mission .heas {
+      padding-top: 5rem;
+      color: #0e3458;
+      padding-bottom: 20px;
+    }
+
+    .mission-img img {
+      height: 350px;
+      width: 520px;
+
+      margin-top: 40px;
+      border-radius: 15px;
+      margin-left: 50px;
+    }
+
+    .gradient-blue-1 {
+      background: #16257F;
+      background: linear-gradient(180deg, rgba(22, 37, 127, 1) 50%, rgba(25, 40, 81, 1) 100%);
+    }
+
+    .gradient-blue-2 {
+      background: #6496FA;
+      background: linear-gradient(181deg, rgba(100, 150, 250, 1) 50%, rgba(55, 83, 128, 1) 100%);
+    }
+
+    .Service-main {
+      padding-top: 50px;
+      background-color: #f2f2f2;
+    }
+
+    .services-section h1 {
+      color: black;
+    }
+
+    .service-img {
+      margin-top: 60px;
+      ;
+    }
+
+    .service-img img {
+      object-fit: contain;
+      width: 84vw;
+      height: 350px;
+      border-radius: 15px;
+    }
+
+    .stats-section {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .stats-section h2 {
+      font-size: 30px;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      font-size: 100px;
+      font-weight: 300;
+      color: #005B8E;
+    }
+
+    .stat-label {
+      font-size: 26px;
+      font-weight: 500;
+      color: #333;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .news-card {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      border: 1px solid #232d3f;
+      border-radius: 25px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .news-meta {
+      color: #555;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .news-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #111;
+    }
+
+    .read-more-btn {
+      background-color: #005b8e;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 8px 20px;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .read-more-btn:hover {
+      background-color: #050a5c;
+    }
+
+    .news-img {
+      object-fit: contain;
+      width: 130px;
+      height: 400px;
+      border-radius: 10px;
+    }
+
+    .testimonial {
+      background-color: #FFFFFF;
+    }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+      #page1>nav>img {
+        margin-top: 10px;
+        padding: 0;
+        width: 26%;
+        height: 8rem;
+      }
+
+      #page1>nav {
+        padding: 0px 30px;
+      }
+
+      #right-nav>button {
+        padding: 7px 12px;
+        border-radius: 50px;
+        background-color: #0e3458;
+        border: 1px solid var(--text-light);
+        color: #FFFFFF;
+        font-family: a;
+        font-size: 12px;
+      }
+
+      #page2>h2 {
+        margin-bottom: 7vw;
+        font-weight: 100;
+        color: #232D3F;
+      }
+
+      #page2>h1 {
+
+        font-size: 8vw;
+      }
+
+      .navbar-large {
+        display: none;
+      }
+
+      .hero-row {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .text-column {
+        text-align: left;
+      }
+
+      .text-column h1 {
+        font-size: 2.8rem;
+        text-align: left;
+        margin-bottom: 30px;
+
+      }
+
+      .text-column p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      .text-column .btn {
+        align-items: start;
+        margin-bottom: 20px;
+      }
+
+      .text-column {
+        padding-top: 1rem;
+      }
+
+      .image-column {
+        padding-top: 0%;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      .image-column img {
+        width: 300px;
+        height: 210px;
+
+      }
+
+      .logos {
+        margin-top: 15rem;
+      }
+
+      .about-row {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mission {
+        margin-top: 40px;
+        width: 100%;
+      }
+
+      .mission .heas {
+
+        font-size: 1.5rem;
+      }
+      .services-imgs img{
+        height: 100px;
+        width: 200px;
+      }
+
+    }
+
+
+
+
+
+
+    @media only screen and (min-width: 1030px) and (max-width: 1605px) {
+      .navbar-small {
+        display: none;
+      }
+    }
+
+
+
+    .hero-logo img {
+      width: 55%;
+      aspect-ratio: 3/2;
+      object-fit: contain
+    }
+  </style>
+  <div class="container-fluid #main p-0">
+      <div data-scroll data-scroll-speed="-5" id="page1" class="navbar-large">
+    <nav>
+      <img src="NM logo final - png-01.png" alt="">
+      <div id="right-nav">
+        <button><a href="#" class="link-offset-2 link-underline link-underline-opacity-0 text-white">Book a
+            Demo</a></button>
+        <button><a href="contact.html" class="link-offset-2 link-underline link-underline-opacity-0 text-white">Contact
+            Us</a></button>
+        <!-- <button><i class="ri-menu-fill"></i></button> -->
+      </div>
+    </nav>
+    <div class="bottom-page1">
+      <h1>Experience Real <br> Estate Agility</h1>
+      <div class="bottom-page1-inner">
+        <h4>Create a digital twin of your existing building <br> and release the potential of Web3.</h4>
+        <button>LEARN MORE</button>
+      </div>
+    </div>
+    <!-- <video src="https://thisismagma.com/wp-content/themes/magma/assets/home/hero/1.mp4?2" autoplay loop muted></video> -->
+  </div>
+
+  <!-- for small screen-size -->
+  <div data-scroll data-scroll-speed="-5" id="page1" class="navbar-small">
+    <nav>
+      <div id="right-nav">
+        <button><a href="#" class="link-offset-2 link-underline link-underline-opacity-0 text-white">Book a
+            Demo</a></button>
+
+      </div>
+      <img src="NM logo final - png-01.png" alt="">
+      <div id="right-nav">
+        <button><a href="contact.html" class="link-offset-2 link-underline link-underline-opacity-0 text-white">Contact
+            Us</a></button>
+      </div>
+    </nav>
+    <div class="bottom-page1">
+      <h1>Experience Real <br> Estate Agility</h1>
+      <div class="bottom-page1-inner">
+        <h4>Create a digital twin of your existing building <br> and release the potential of Web3.</h4>
+        <button>LEARN MORE</button>
+      </div>
+    </div>
+    <!-- <video src="https://thisismagma.com/wp-content/themes/magma/assets/home/hero/1.mp4?2" autoplay loop muted></video> -->
+  </div>
+
+
+  <div id="page2  p-0">
+    <h2>CERTIFY YOUR BUILDING AS A DIGITAL TWIN TOKEN (DTT)</h2>
+    <h1>The Digital Twin Token is a unique digital asset backed by property data. Magma combines your building’s
+      components and systems essential information into a DTT.</h1>
+  </div>
+
+  <div class=" container-fluid hero-section">
+    <div class="container hero-main ">
+      <div class="row hero-row">
+        <div class="text-column col-6">
+          <h1>Ethical Efficiency™ for Everyone</h1>
+          <p>Lean Six Sigma Training, Certification, Coaching &amp; Project Management Tools proven
+            to help teams measurably improve processes.</p>
+          <a href="#" class="btn btn-primary align-items-start">START FREE TRAINING →</a>
+          <a href="#" class="btn btn-secondary">WATCH DEMO →</a>
+        </div>
+
+        <div class="image-column col-6 p-0">
+          <img src="bc26e977-5782-4e8f-968c-3d57e3faa9e7.jpeg" alt="Training Preview">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="logos container-fluid text-center py-5 ">
+    <div class="row">
+
+      <div class="col-4 col-md-2 hero-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="" class="img-fluid">
+      </div>
+      <div class="col-4 col-md-2 hero-logo">
+        <img src="./CVS-health-logo-stacked-png.webp" alt="" class="img-fluid">
+      </div>
+      <div class="col-4 col-md-2 hero-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="" class="img-fluid">
+      </div>
+      <div class="col-4 col-md-2 hero-logo">
+        <img src="/Air-Force-square-logo-768x768.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-4 col-md-2 hero-logo">
+        <img src="./pngimg.com-meta_PNG12-768x768.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-4 col-md-2 hero-logo">
+        <img src="./Disney_Logo_square.png" alt="" class="img-fluid">
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid aboutgy">
+
+    <div class="row about-row">
+      <div class="col-12 col-md-7 mission">
+
+        <H1 class="text-center heas">Our Mission </H1>
+        <p class="ps-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
+          itaque deleniti voluptates, similique suscipit fuga deserunt enim vero nemo eveniet
+          explicabo necessitatibus nobis, neque adipisci totam possimus laborum debitis
+          cupiditat temporibus odit, amet cupiditate fugit et vel nisi
+          quam perferendis inventore hic laboriosquam!</p>
+
+      </div>
+      <div class="col-12 col-md-5 mission-img">
+
+        <img src="NMease-mission.png" alt="" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row about-row">
+      <div class="col-12 col-md-5 mission-img">
+        <img src="NMease-mission.png" alt="" class="img-fluid">
+      </div>
+
+      <div class="col-12 col-md-7 mission">
+
+        <H1 class="text-center heas">Our Vision </H1>
+        <p class="ps-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
+          itaque deleniti voluptates, similique suscipit fuga deserunt enim vero nemo eveniet
+          explicabo necessitatibus nobis, neque adipisci totam possimus laborum debitis
+          cupiditat temporibus odit, amet cupiditate fugit et vel nisi
+          quam perferendis inventore hic laboriosquam!</p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="about-us" class="row py-5 text-center crd-section m-0">
+    <div class="container-fluid drd">
+      <h2 class="fw-bold text-center"><span>Our Team's Results</span></h2>
+
+      <div class="row g-4">
+
+        <!-- Example Card -->
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-1">
+            <div class="result-title">300 to 4,000</div>
+            <div class="result-description">Improved output from 300 units per month to 4,000 units per
+              month</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-2">
+            <div class="result-title">3x</div>
+            <div class="result-description">Trebled an ASX Top 50 company's share price</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-1">
+            <div class="result-title">38%</div>
+            <div class="result-description">Reduced manufacturing costs by 38%</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-2">
+            <div class="result-title">465%</div>
+            <div class="result-description">Improved productivity by 465%</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-1">
+            <div class="result-title">3 Million</div>
+            <div class="result-description">Saved £3m in annual labour costs</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-2">
+            <div class="result-title">33%</div>
+            <div class="result-description">Reduced raw materials stock by 33%</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-4">
+          <div class="result-card gradient-blue-1">
+            <div class="result-title">50%</div>
+            <div class="result-description">Reduced finished goods stock by 50%</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-2">
+            <div class="result-title">(850k) to Profit</div>
+            <div class="result-description">Turned factory performance from £850k loss into profit in
+              nine months</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-1">
+            <div class="result-title">75%</div>
+            <div class="result-description">Reduced space requirement by 75%</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-2">
+            <div class="result-title">45 to Next Day</div>
+            <div class="result-description">Reduced delivery lead time from 45 days to next day</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-1">
+            <div class="result-title">Turnaround</div>
+            <div class="result-description">Turned around biggest label-printing site in Europe which
+              had been unprofitable for 3.5 years</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-2">
+            <div class="result-title">28.5%</div>
+            <div class="result-description">Increased annual sales by 28.5%</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-1">
+            <div class="result-title">Turnaround</div>
+            <div class="result-description">Turned around biggest label-printing site in Europe which
+              had been unprofitable for 3.5 years</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-2">
+            <div class="result-title">Turnaround</div>
+            <div class="result-description">Turned around biggest label-printing site in Europe which
+              had been unprofitable for 3.5 years</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-4">
+          <div class="result-card gradient-blue-1">
+            <div class="result-title">Turnaround</div>
+            <div class="result-description">Turned around biggest label-printing site in Europe which
+              had been unprofitable for 3.5 years</div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid Service-main p-0">
+    <div class="services-section">
+      <h1 class="text-center">Our Services</h1>
+      <div class="container services-imgs">
+
+        <img src="Screenshot 2025-09-16 174901.png " alt="">
+
+        <!-- <div class="service-img">
+                     <img src="Nmease-service.png" alt="">
+                   </div>
+
+                    <div class="service-card">
+                    <div class="row">
+                        <div class="col-4">
+                             <div class="result-card gradient-blue-1">
+                                <div class="result-icon"><i class="bi bi-calendar3"></i></div>
+                            <div class="result-title">Mobile Development</div>
+                            <div class="result-description">Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident.</div>
+                        </div> 
+                        </div>
+                         <div class="col-4">
+                           <div class="result-card gradient-blue-1">
+                            <div class="result-icon"><i class="bi bi-calendar3"></i></div>
+                            <div class="result-title">Mobile Development</div>
+                            <div class="result-description">Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident.</div>
+                        </div>                            
+                        </div>
+                         <div class="col-4">
+                            <div class="result-card gradient-blue-1">
+                                <div class="result-icon"><i class="bi bi-calendar3"></i></div>
+                            <div class="result-title">Mobile Development</div>
+                            <div class="result-description">Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident.</div>
+                        </div>                            
+                        </div>
+                    </div>
+                </div> -->
+      </div>
+
+    </div>
+  </div>
+
+  <section class="stats-section pb-5">
+    <div class="container">
+      <h2>On average, our clients achieve:</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="stat-value" data-target="53" data-suffix="%">0%</div>
+          <div class="stat-label">Reduction in Processing<br>Times and Defects</div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-value" data-target="61" data-suffix="%">0%</div>
+          <div class="stat-label">Increase in<br>Production</div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-value" data-target="213" data-suffix="K">$0K</div>
+          <div class="stat-label">Savings<br>Per Project</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid testimonial pt-5 ">
+    <div class="container pt-5">
+      <div class="row text-center ">
+        <h1 class="hero-title">Clients Testimonial</h1>
+      </div>
+      <div class="row pt-5 mt-1">
+        <div class="col-6">
+          <div class="news-card">
+            <!-- Image Section -->
+            <img src="client-img.png" alt="News Article" class="news-img img-fluid">
+
+            <!-- Text Content -->
+            <div>
+              <div class="news-meta mb-1">NEWS - 2024 | ENGLISH JAGRAN</div>
+              <div class="news-title mb-3">
+                How Extracurricular Activities Are Shaping Holistic Education In K-12 Schools
+              </div>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="news-card">
+            <!-- Image Section -->
+            <img src="client-img.png" alt="News Article" class="news-img img-fluid">
+
+            <!-- Text Content -->
+            <div>
+              <div class="news-meta mb-1">NEWS - 2024 | ENGLISH JAGRAN</div>
+              <div class="news-title mb-3">
+                How Extracurricular Activities Are Shaping Holistic Education In K-12 Schools
+              </div>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="news-card">
+            <!-- Image Section -->
+            <img src="client-img.png" alt="News Article" class="news-img img-fluid">
+
+            <!-- Text Content -->
+            <div>
+              <div class="news-meta mb-1">NEWS - 2024 | ENGLISH JAGRAN</div>
+              <div class="news-title mb-3">
+                How Extracurricular Activities Are Shaping Holistic Education In K-12 Schools
+              </div>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="news-card">
+            <!-- Image Section -->
+            <img src="client-img.png" alt="News Article" class="news-img img-fluid">
+
+            <!-- Text Content -->
+            <div>
+              <div class="news-meta mb-1">NEWS - 2024 | ENGLISH JAGRAN</div>
+              <div class="news-title mb-3">
+                How Extracurricular Activities Are Shaping Holistic Education In K-12 Schools
+              </div>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Counter Script -->
+  <script>
+    const counters = document.querySelectorAll('.stat-value');
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const currentText = counter.innerText.replace(/[^0-9.]/g, '');
+        const count = +currentText;
+
+        const increment = target / 60; // 60 steps for smooth animation
+
+        if (count < target) {
+          counter.innerText = (Math.ceil(count + increment)) + suffix;
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target + suffix;
+        }
+      };
+
+      // Start counting on load
+      updateCount();
+    });
+  </script>
+</body>
+
 </html>
