@@ -4,6 +4,7 @@
         <a class="navbar-brand" href="../index.html">
             <img src="./assets/nmease-logo.png" alt="Logo" class="logo">
         </a>
+        <button class="cust-btn btn-left rounded" type="submit">Call Now</button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon text-white"></span>
@@ -27,8 +28,8 @@
                 </li>
             </ul>
         </div>
-
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        
+        <button class="cust-btn btn-right rounded" type="submit">Call Now</button>
     </div>
 </nav>
 
@@ -40,18 +41,63 @@
         padding-left: 15%;
     }
 
-    .nav-a {    
-        color: rgb(0, 0, 0);
+    .btn-left{
+        display: none;
+    }
+
+    .cust-btn{
+        background-color: #0e3458;
+        color: white;
+        border: 1px solid #0e3458;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .cust-btn:hover{
+        background-color: white;
+        color: #0e3458;
+        border: 1px solid #0e3458;
         transition: 0.3s;
     }
-    
-    .nav-a:hover, .nav-a.active {
-        color: rgb(139, 133, 133);
-    }
+
+    .nav-a {
+    position: relative;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust space between text and underline */
+    width: 0;
+    height: 3px; /* Thickness of underline */
+    background-color: #0e3458;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-a:hover::after,
+.nav-a.active::after {
+    width: 100%;
+}
+
 
     @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
         .logo {
-            width: 12rem;
+            width: 7rem;
+            padding-left: 2%;
+        }
+
+        .btn-left{
+            display: block;
+            margin-left: 20%;
+        }
+
+        .btn-right{
+            display: none;
         }
 
         form {
