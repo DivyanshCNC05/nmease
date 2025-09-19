@@ -121,13 +121,6 @@
   gap: 20px;
 }
 
-.section-2 {
-  background-color: var(--primary-color);
-  color: white;
-  padding-bottom: 5rem;
-  padding-top: 5rem;
-}
-
 
 
 
@@ -187,6 +180,80 @@
         border: 1px solid #0e3458;
         transition: 0.3s;
     }
+
+    .section-2 {
+        background-color: #16163f;
+        color: white;
+        padding-bottom: 3rem;
+        padding-top: 5rem;
+      }
+
+      .section-2 .row h2 {
+        font-size: 30px;
+        word-spacing: 2.2px;
+        padding-bottom: 2rem;
+      }
+
+      .section-number-2 .col-12 h1 {
+        font-size: 40px;
+      }
+
+      .section-number-2 .col-12 {
+        text-align: left;
+        padding-bottom: 2rem;
+      }
+
+      .text-section-3 .text {
+        padding-top: 4rem;
+        padding-left: 2rem;
+      }
+
+      .text-section-3 .text .heading {
+        text-align: center;
+        color: #9e3ffd;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .text-section-3 .text h1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 639;
+        padding-bottom: 2rem;
+      }
+
+      .text-section-3 .text .written {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .img-section-3 {
+        background: url('../assets/service-bg-moblie.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+      }
+      .section-4{
+        background-color: #8a8a8a;
+      }
+
+      .section-4-logo {
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+      }
+
+     
+
+      .section-4-logo img {
+        width: 60%;
+        aspect-ratio: 2/2;
+        object-fit: contain;
+      }
+
+      .section-4 h2 {
+        padding-top: 5rem;
+        text-align: center;
+      }
 
 
 }
@@ -253,4 +320,74 @@
   .service-detail {
     font-weight: 300;
   }
+
+  .section-2 {
+        background-color: #16163f;
+        color: white;
+        padding-bottom: 7rem;
+        padding-top: 6rem;
+      }
+
+      .section-2 .row h2 {
+        font-size: 36px;
+        word-spacing: 2.2px;
+        padding-bottom: 2rem;
+      }
+
+      .section-number-2 .col-md-2 h1 {
+        font-size: 80px;
+      }
+
+      .section-number-2 .col-md-2 {
+        text-align: left;
+      }
+
+      .text-section-3 .text {
+        padding-top: 5rem;
+        padding-left: 5rem;
+      }
+
+      .text-section-3 .text .heading {
+        color: #9e3ffd;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .text-section-3 .text h1 {
+        font-size: 36px;
+        font-weight: 639;
+        padding-bottom: 2.5rem;
+      }
+
+      .text-section-3 .text .written {
+        color: #555;
+      }
+
+      .img-section-3 {
+        background: url('../assets/service-bg.png');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .section-4{
+        background-color: #8a8a8a;
+      }
+
+      .section-4-logo {
+        padding-top: 3.5rem;
+        padding-bottom: 6rem;
+      }
+
+     
+
+      .section-4-logo img {
+        width: 50%;
+        aspect-ratio: 2/2;
+        object-fit: contain;
+      }
+
+      .section-4 h2 {
+        padding-top: 5rem;
+        text-align: center;
+      }
 }
