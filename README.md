@@ -1,2 +1,0 @@
-# nmease
-A Consulting Company.
