@@ -155,35 +155,6 @@
     color: #5f5e5e;
   }
 
-  .section-1-btn {
-    margin-left: 25%;
-    margin-top: 0.5rem;
-    text-transform: uppercase;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #000000;
-    text-shadow: none;
-    background: transparent;
-    cursor: pointer;
-    box-shadow: transparent;
-    border: 1px solid #000000;
-    transition: 0.5s ease;
-    user-select: none;
-  }
-
-  #hero-btn:hover,
-  :focus {
-    color: #ffffff;
-    background: var(--primary-color);
-    border: 1px solid #0e3458;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #0e3458, 0 0 20px #0e3458, 0 0 50px #0e3458,
-      0 0 100px #0e3458;
-  }
-
-
-
   .service-p {
     font-weight: 500;
     color: var(--secondary-color);
@@ -200,6 +171,23 @@
     font-weight: 300;
   }
 
+  .cust-btn-hero{
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        font-size: 1.5rem;
+        margin-left: 7rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .cust-btn-hero:hover{
+        background-color: var(--primary-color);
+        color: white;
+        border: 1px solid #0e3458;
+        transition: 0.3s;
+    }
+
 
 }
 
@@ -210,32 +198,22 @@
 
 @media only screen and (min-width: 1030px) and (max-width: 1605px) {
 
-  .section-1-btn {
-    margin-top: 1.5rem;
-    margin-left: 7rem;
-    text-transform: uppercase;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #000000;
-    text-shadow: none;
-    background: transparent;
-    cursor: pointer;
-    box-shadow: transparent;
-    border: 1px solid #000000;
-    transition: 0.5s ease;
-    user-select: none;
-  }
+  .cust-btn-hero{
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        font-size: 1.5rem;
+        margin-left: 6rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
-  #hero-btn:hover,
-  :focus {
-    color: #ffffff;
-    background: var(--primary-color);
-    border: 1px solid #0e3458;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #0e3458, 0 0 20px #0e3458, 0 0 50px #0e3458,
-      0 0 100px #0e3458;
-  }
+    .cust-btn-hero:hover{
+        background-color: var(--primary-color);
+        color: white;
+        border: 1px solid #0e3458;
+        transition: 0.3s;
+    }
 
   .section-1 {
     background-image: url('../assets/hero-bg-img.png');
@@ -259,8 +237,6 @@
     padding-top: 1rem;
     color: #5f5e5e;
   }
-
-
 
   .service-p {
     font-weight: 500;
