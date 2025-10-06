@@ -415,11 +415,22 @@
         font-size: 36px;
         font-weight: 639;
         padding-bottom: 2.5rem;
+          display: inline-block; 
       }
 
       .text-section-3 .text .written {
         color: #555;
+        line-height: 1.8;
+  display: inline-block;
+  width: fit-content; 
+  max-width: 80%; 
+  padding-bottom: 15px;
+       
       }
+
+     
+
+
 
       .img-section-3 {
         background: url('../assets/service-bg.png');
@@ -428,18 +439,19 @@
         background-repeat: no-repeat;
       }
       .section-4{
-        background-color: #8a8a8a;
+        background-color: black;
       }
 
       .section-4-logo {
         padding-top: 3.5rem;
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
       }
 
      
 
       .section-4-logo div img {
-        width: 70%;
+        width: 80%;
+        height:150px;
         aspect-ratio: 2/2;
         object-fit: contain;
       }
@@ -447,7 +459,9 @@
       .section-4 h2 {
         padding-top: 5rem;
         text-align: center;
+        color: white;
       }
+
       .photo-card {
   position: relative;
   display: inline-block;
@@ -487,7 +501,7 @@
 
 .row-team
 {
-  border-bottom: 2px double white;
+  /* border-bottom: 2px double white; */
   background-color: #16163f;
   color: white;
 }
@@ -495,6 +509,8 @@
 .row-team h1 {
   padding-left: 80px;
   font-size: 2.7rem;
+   border-bottom: 2px double white;
+   padding-bottom: 15px;
 }
 }
 
@@ -533,4 +549,33 @@
     .client-role {
       color: #777;
       font-size: 0.85rem;
+    }
+
+    .our-row{
+      height: 80vh;
+    }
+
+    .our-img img {
+      width: 250px;
+      height: 40vh;
+     padding-top: 20%;
+    }
+
+    .col-4 h3{
+      font-weight: bold;
+    }
+
+    .para p{
+        display: inline-block;
+  width: fit-content; 
+  max-width: 80%; 
+  padding-top: 20px;
+    }
+
+    .row-2 h2{
+      padding-top: 30px;
+    }
+
+    .row-2 img{
+ padding-top: 50px;
     }
