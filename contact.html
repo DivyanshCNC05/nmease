@@ -11,14 +11,15 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #e8dfca);
+  background: linear-gradient(135deg, #f0eded
+  );
 }
 
 /* ===== Contact Section ===== */
 #contact {
   min-height: 100vh;
   padding: 40px 20px;
-  background-color: #e8dfca;
+  background-color: #f0eded;
   overflow: hidden;
 }
 
@@ -269,6 +270,42 @@ background: linear-gradient(180deg, rgba(232, 223, 202, 1) 0%, rgba(255, 255, 25
   }
 }
 
+.testimonial {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px 20px;
+      margin: 15px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      height: 100%;
+    }
+    .testimonial:hover {
+      transform: translateY(-5px);
+    }
+    .testimonial p {
+      font-size: 0.95rem;
+      color: #555;
+      font-style: italic;
+      min-height: 60px;
+    }
+    .client-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid #007bff;
+    }
+    .client-name {
+      font-weight: 600;
+      margin-top: 5px;
+      font-size: 1rem;
+      color: #333;
+    }
+    .client-role {
+      color: #777;
+      font-size: 0.85rem;
+    }
 
 
   </style>
@@ -328,65 +365,88 @@ background: linear-gradient(180deg, rgba(232, 223, 202, 1) 0%, rgba(255, 255, 25
     </div>
   </section>
 
- <div class="container-fluid testimonial pt-5">
-  <div class="container pt-5">
-    <div class="row text-center">
-      <h1 class="hero-title">Clients Testimonial</h1>
-    </div>
+  <div id="testimonial" class="container pt-5 position-relative">
+  <h2 class="text-center">Testimonial</h2>
+  
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner py-5">
 
-    <div class="row pt-5 mt-1 g-3">
-      <div class="col-6 col-md-6">
-        <div class="news-card">
-          <img src="client-img.png" alt="News Article" class="news-img img-fluid">
-          <div>
-            <div class="news-meta mb-1">NEWS - 2024 | ENGLISH JAGRAN</div>
-            <div class="news-title mb-3">
-              How Extracurricular Activities Are Shaping Holistic Education In K-12 Schools
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row ">
+          <div class="col-6 col-md-3 py-2">
+            <div class="testimonial text-center">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="client-img" alt="">
+              <p>"Absolutely amazing service. Couldn’t be happier with the results."</p>
+              <div class="client-name">Sarah Johnson</div>
+              <div class="client-role">Marketing Manager</div>
             </div>
-            
+          </div>
+          <div class="col-6 col-md-3 py-2">
+            <div class="testimonial text-center">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img" alt="">
+              <p>"The support team is fantastic. They went above and beyond!"</p>
+              <div class="client-name">Michael Lee</div>
+              <div class="client-role">Entrepreneur</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 py-2">
+            <div class="testimonial text-center">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="client-img" alt="">
+              <p>"Professional, reliable, and highly recommended."</p>
+              <div class="client-name">Emily Davis</div>
+              <div class="client-role">Project Coordinator</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 py-2">
+            <div class="testimonial text-center">
+              <img src="https://randomuser.me/api/portraits/men/41.jpg" class="client-img" alt="">
+              <p>"They delivered on time and exceeded expectations!"</p>
+              <div class="client-name">David Wilson</div>
+              <div class="client-role">Business Owner</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-6 col-md-6">
-        <div class="news-card">
-          <img src="client-img.png" alt="News Article" class="news-img img-fluid">
-          <div>
-            <div class="news-meta mb-1">NEWS - 2024 | ENGLISH JAGRAN</div>
-            <div class="news-title mb-3">
-              How Extracurricular Activities Are Shaping Holistic Education In K-12 Schools
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-6 col-md-3 py-2">
+            <div class="testimonial text-center">
+              <img src="https://randomuser.me/api/portraits/women/23.jpg" class="client-img" alt="">
+              <p>"Truly impressed with their professionalism and creativity."</p>
+              <div class="client-name">Laura Green</div>
+              <div class="client-role">Designer</div>
             </div>
-            
-            
+          </div>
+          <div class="col-6 col-md-3 py-2">
+            <div class="testimonial text-center">
+              <img src="https://randomuser.me/api/portraits/men/52.jpg" class="client-img" alt="">
+              <p>"The team was friendly, efficient, and delivered great work."</p>
+              <div class="client-name">James Carter</div>
+              <div class="client-role">Consultant</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 py-2">
+            <div class="testimonial text-center">
+              <img src="https://randomuser.me/api/portraits/women/19.jpg" class="client-img" alt="">
+              <p>"Great communication throughout the project. Highly satisfied!"</p>
+              <div class="client-name">Olivia Brown</div>
+              <div class="client-role">HR Manager</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 py-2">
+            <div class="testimonial text-center">
+              <img src="https://randomuser.me/api/portraits/men/67.jpg" class="client-img" alt="">
+              <p>"A seamless experience from start to finish. Thank you!"</p>
+              <div class="client-name">Robert King</div>
+              <div class="client-role">CEO</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-6 col-md-6">
-        <div class="news-card">
-          <img src="client-img.png" alt="News Article" class="news-img img-fluid">
-          <div>
-            <div class="news-meta mb-1">NEWS - 2024 | ENGLISH JAGRAN</div>
-            <div class="news-title mb-3">
-              How Extracurricular Activities Are Shaping Holistic Education In K-12 Schools
-            </div>
-           
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-6">
-        <div class="news-card">
-          <img src="client-img.png" alt="News Article" class="news-img img-fluid">
-          <div>
-            <div class="news-meta mb-1">NEWS - 2024 | ENGLISH JAGRAN</div>
-            <div class="news-title mb-3">
-              How Extracurricular Activities Are Shaping Holistic Education In K-12 Schools
-            </div>
-           
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

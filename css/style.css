@@ -126,7 +126,7 @@
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
   .section-1-mobile {
-    background-image: url('../assets/hero-bg-img.png');
+    background-image: url('../assets/updatedpic-1.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     height: 40vh;
@@ -228,7 +228,7 @@
       }
 
       .img-section-3 {
-        background: url('../assets/service-bg-moblie.png');
+        background: url('../assets/updatedpic-2\ -\ Copy.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
@@ -335,7 +335,7 @@
     }
 
   .section-1 {
-    background-image: url('../assets/hero-bg-img.png');
+    background-image: url('../assets/updatedpic-1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -433,7 +433,7 @@
 
 
       .img-section-3 {
-        background: url('../assets/service-bg.png');
+        background: url('../assets/updatedpic-2.jpg');
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
