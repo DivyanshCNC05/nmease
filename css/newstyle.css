@@ -611,8 +611,9 @@
   border-right: 2px solid gray;
 }
 .service-icon img{
- object-fit: contain;
- width: ;
+  object-fit: contain;
+ width: 45%;
+ padding-bottom: 2rem;
 }
 }
 
@@ -657,25 +658,6 @@
   color: #777;
   font-size: 0.85rem;
 }
-
-.service-icon img{
- height: 10px;
- width: 20px;
-}
-
-
-
 .col-4 h3 {
   font-weight: bold;
-}
-
-
-
-
-
-
-
-#service img {
-  height: 200px;
-  width: 200px;
 }
