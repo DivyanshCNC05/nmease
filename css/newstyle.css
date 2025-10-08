@@ -359,6 +359,12 @@
   filter: grayscale(100%);  
 }
 
+.service-icon img{
+  object-fit: contain;
+ width: 45%;
+ padding-bottom: 2rem;
+}
+
 }
 
 
