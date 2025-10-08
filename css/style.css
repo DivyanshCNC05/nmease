@@ -208,6 +208,7 @@
 
   .text-section-3 .text {
     padding-top: 4rem;
+    padding-bottom: 4rem;
     padding-left: 2rem;
   }
 
@@ -336,9 +337,26 @@
   text-align: center;
 }
 .our-img img {
-  width: 70%;
+  margin-bottom: 2rem;
+  width: 20%;
   object-fit: contain;
   padding-top: 20%;
+}
+.visson p{
+  max-width: 340px;
+}
+.img-take{
+  display: none;
+  
+}
+.img-border{
+  border-right: 2px solid gray;
+  border-left: 2px solid gray;
+}
+.img-take img{
+  object-fit: contain;
+  width: 13%;
+  filter: grayscale(100%);  
 }
 
 }
@@ -435,6 +453,7 @@
 
   .text-section-3 .text {
     padding-top: 5rem;
+    padding-bottom: 4rem;
     padding-left: 5rem;
   }
 
@@ -563,9 +582,33 @@
   padding-top: 20px;
 }
 .our-img img {
-  width: 100%;
+  width: 25%;
+  margin-bottom: 2rem;
   object-fit: contain;
   padding-top: 20%;
+}
+.founder-name{
+  padding-top: 4rem;
+}
+.visson p{
+  max-width: 340px;
+}
+.img-take{
+  margin-top: 2rem;
+  
+}
+.img-border{
+  border-right: 2px solid gray;
+  border-left: 2px solid gray;
+}
+.img-take img{
+  object-fit: contain;
+  width: 13%;
+  filter: grayscale(100%);  
+}
+.msoon {
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
 }
 }
 
@@ -611,10 +654,6 @@
   font-size: 0.85rem;
 }
 
-.msoon {
-  border-left: 2px solid gray;
-  border-right: 2px solid gray;
-}
 
 
 
