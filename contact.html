@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,287 +8,292 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <style>
     /* ===== Page Background ===== */
-  /* ===== Page Background ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f0eded
-  );
-}
+    /* ===== Page Background ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f0eded);
+    }
 
-/* ===== Contact Section ===== */
-#contact {
-  min-height: 100vh;
-  padding: 40px 20px;
-  background-color: #f0eded;
-  overflow: hidden;
-}
+    /* ===== Contact Section ===== */
+    #contact {
+      min-height: 100vh;
+      padding: 40px 20px;
+      background-color: #f0eded;
+      overflow: hidden;
+    }
 
-/* ===== Heading ===== */
-#contact h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #0e3458;
-  position: relative;
-  display: block;
-  text-align: center;
-  font-weight: bolder;
-}
+    /* ===== Heading ===== */
+    #contact h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #0e3458;
+      position: relative;
+      display: block;
+      text-align: center;
+      font-weight: bolder;
+    }
 
-#contact h1::after {
-  content: "";
-  width: 50px;
-  height: 3px;
-  background: #0e3458;
-  display: block;
-  margin: 8px auto 0;
-  border-radius: 2px;
-}
+    #contact h1::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: #0e3458;
+      display: block;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
 
-#contact p.intro {
-  font-size: 1.2rem;
-  color: #0e3458;
-  margin-bottom: 30px;
-  padding-top: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
-}
+    #contact p.intro {
+      font-size: 1.2rem;
+      color: #0e3458;
+      margin-bottom: 30px;
+      padding-top: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align: center;
+    }
 
-/* ===== White Box for Form + Details ===== */
-.contact-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 100px;
-}
+    /* ===== White Box for Form + Details ===== */
+    .contact-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 100px;
+    }
 
-/* ===== Form Styling ===== */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-family: 'Arial', sans-serif;
-  align-items: center;
-  padding-top: 15px;
-}
+    /* ===== Form Styling ===== */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-family: 'Arial', sans-serif;
+      align-items: center;
+      padding-top: 15px;
+    }
 
-.contact-form input,
-.contact-form textarea {
-  width: 80%;
-  padding: 10px 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-  transition: border 0.3s, box-shadow 0.3s;
-}
+    .contact-form input,
+    .contact-form textarea {
+      width: 80%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #0e3458;
-  box-shadow: 0 0 5px rgba(14, 52, 88, 0.3);
-  outline: none;
-}
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #0e3458;
+      box-shadow: 0 0 5px rgba(14, 52, 88, 0.3);
+      outline: none;
+    }
 
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
 
-.contact-form button {
-  padding: 8px 20px;
-  font-size: 1rem;
-  color: #fff;
-  background: #0e3458;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
+    .contact-form button {
+      padding: 8px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background: #0e3458;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
 
-.contact-form button:hover {
-  background: #074060;
-  transform: translateY(-2px);
-}
+    .contact-form button:hover {
+      background: #074060;
+      transform: translateY(-2px);
+    }
 
-/* ===== Contact Details ===== */
-.contact-details {
-  padding-left: 150px;
-  padding-top: 45px;
-}
+    /* ===== Contact Details ===== */
+    .contact-details {
+      padding-left: 150px;
+      padding-top: 45px;
+    }
 
-.contact-details p {
-  padding: 5px 0;
-}
+    .contact-details p {
+      padding: 5px 0;
+    }
 
-.contact-details h2 {
-  margin-bottom: 15px;
-  color: #0e3458;
-  font-size: 1.6rem;
-  position: relative;
-  display: inline-block;
-  font-weight: bolder;
-  padding-left: 20px;
-}
+    .contact-details h2 {
+      margin-bottom: 15px;
+      color: #0e3458;
+      font-size: 1.6rem;
+      position: relative;
+      display: inline-block;
+      font-weight: bolder;
+      padding-left: 20px;
+    }
 
-.contact-details h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #0e3458;
-  margin: 4px auto 0;
-  border-radius: 2px;
-}
+    .contact-details h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #0e3458;
+      margin: 4px auto 0;
+      border-radius: 2px;
+    }
 
-/* Social Media */
-.social-links {
-  margin-top: 12px;
-}
+    /* Social Media */
+    .social-links {
+      margin-top: 12px;
+    }
 
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-  border-radius: 50%;
-  background: #0e3458;
-  transition: 0.3s;
-}
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      border-radius: 50%;
+      background: #0e3458;
+      transition: 0.3s;
+    }
 
-.social-links a img {
-  width: 20px;
-  height: 20px;
-  filter: invert(1);
-}
+    .social-links a img {
+      width: 20px;
+      height: 20px;
+      filter: invert(1);
+    }
 
-.social-links a:hover {
-  background: #333;
-  transform: scale(1.1);
-}
+    .social-links a:hover {
+      background: #333;
+      transform: scale(1.1);
+    }
 
-/* ===== Map ===== */
-.map {
-  width: 90%;
-  margin: 30px auto 0;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    /* ===== Map ===== */
+    .map {
+      width: 90%;
+      margin: 30px auto 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-.map iframe {
-  width: 100%;
-  height: 350px;
-  border: none;
-  display: block;
-}
+    .map iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      display: block;
+    }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  /* Contact box full width */
-  .contact-box {
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-  }
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
 
-  .contact-details {
-    padding-left: 0;
-    padding-top: 20px;
-    text-align: center;
-  }
+      /* Contact box full width */
+      .contact-box {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 8px;
+      }
 
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-  }
+      .contact-details {
+        padding-left: 0;
+        padding-top: 20px;
+        text-align: center;
+      }
 
-  .contact-form {
-    align-items: stretch;
-  }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+      }
 
-  /* Center social icons */
-  .social-links {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
+      .contact-form {
+        align-items: stretch;
+      }
 
-.testimonial {
-background: #E8DFCA;
-background: linear-gradient(180deg, rgba(232, 223, 202, 1) 0%, rgba(255, 255, 255, 1) 10%);
-  padding-bottom: 50px;
-}
+      /* Center social icons */
+      .social-links {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
 
-.news-card {
-  border: 1px solid #232d3f;
-  border-radius: 20px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column; /* stack content */
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  height: 100%; /* make equal height */
-}
+    .testimonial {
+      background: #E8DFCA;
+      background: linear-gradient(180deg, rgba(232, 223, 202, 1) 0%, rgba(255, 255, 255, 1) 10%);
+      padding-bottom: 50px;
+    }
 
-.news-meta {
-  color: #555;
-  font-size: 13px;
-  font-weight: 500;
-}
+    .news-card {
+      border: 1px solid #232d3f;
+      border-radius: 20px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      /* stack content */
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      height: 100%;
+      /* make equal height */
+    }
 
-.news-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #111;
-}
+    .news-meta {
+      color: #555;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .news-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #111;
+    }
 
 
 
 
 
-.news-img {
-  object-fit: cover;
-  width: 100%;
-  max-height: 160px;
-  border-radius: 10px;
-}
+    .news-img {
+      object-fit: cover;
+      width: 100%;
+      max-height: 160px;
+      border-radius: 10px;
+    }
 
-/* ✅ Responsive Fix */
-@media (max-width: 576px) {
-  .news-title {
-    font-size: 14px;
-  }
+    /* ✅ Responsive Fix */
+    @media (max-width: 576px) {
+      .news-title {
+        font-size: 14px;
+      }
 
-  .read-more-btn {
-    font-size: 14px;
-    padding: 5px 12px;
-  }
-}
+      .read-more-btn {
+        font-size: 14px;
+        padding: 5px 12px;
+      }
+    }
 
-.testimonial {
+    .testimonial {
       background: #fff;
       border-radius: 10px;
       padding: 25px 20px;
       margin: 15px 0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
       height: 100%;
     }
+
     .testimonial:hover {
       transform: translateY(-5px);
     }
+
     .testimonial p {
       font-size: 0.95rem;
       color: #555;
       font-style: italic;
       min-height: 60px;
     }
+
     .client-img {
       width: 70px;
       height: 70px;
@@ -296,165 +302,183 @@ background: linear-gradient(180deg, rgba(232, 223, 202, 1) 0%, rgba(255, 255, 25
       margin-bottom: 10px;
       border: 3px solid #007bff;
     }
+
     .client-name {
       font-weight: 600;
       margin-top: 5px;
       font-size: 1rem;
       color: #333;
     }
+
     .client-role {
       color: #777;
       font-size: 0.85rem;
     }
-
-
   </style>
 </head>
+
 <body>
   <div class="container-fluid m-0 p-0">
     <!-- navbar section start  -->
     <nav class="test_nav "></nav>
     <!-- navbar section ends  -->
-  <section id="contact" class="container">
-    <h1>Contact Us</h1>
-    <p class="intro">Feel free to contact us anytime. We will get back to you as soon as we can!</p>
+    <section id="contact" class="container">
+      <h1>Contact Us</h1>
+      <p class="intro">Feel free to contact us anytime. We will get back to you as soon as we can!</p>
 
-  
-    <div class="contact-box">
-      <div class="row g-4">
-        
-        <div class="col-md-6">
-          <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
 
-        
-        <div class="col-md-6">
-          <div class="contact-details">
-            <h2>GET IN TOUCH</h2>
-            <p><strong>Email:</strong> info@yourcompany.com</p>
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-            <p><strong>Follow us on:</strong></p>
-            <div class="social-links">
-              <a href="https://instagram.com/yourhandle" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
-              </a>
-              <a href="https://twitter.com/yourhandle" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter">
-              </a>
-              <a href="https://x.com/yourhandle" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X">
-              </a>
-              <a href="https://linkedin.com/in/yourhandle" target="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
-              </a>
-            </div>
+      <div class="contact-box">
+        <div class="row g-4">
+
+          <div class="col-md-6">
+            <form class="contact-form">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+              <textarea placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Map below -->
-    <div class="map">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.790539150507!2d75.95106231500929!3d22.972009379350606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f6f9f0a6e4a9%3A0x7c93e12e444e6ee6!2sDewas%2C%20Madhya%20Pradesh%20455001%2C%20India!5e0!3m2!1sen!2sin!4v1694600000000!5m2!1sen!2sin" 
-        allowfullscreen 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
 
-  <div id="testimonial" class="container pt-5 position-relative">
-  <h2 class="text-center">Testimonial</h2>
-  
-  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner py-5">
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="row ">
-          <div class="col-6 col-md-3 py-2">
-            <div class="testimonial text-center">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="client-img" alt="">
-              <p>"Absolutely amazing service. Couldn’t be happier with the results."</p>
-              <div class="client-name">Sarah Johnson</div>
-              <div class="client-role">Marketing Manager</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 py-2">
-            <div class="testimonial text-center">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img" alt="">
-              <p>"The support team is fantastic. They went above and beyond!"</p>
-              <div class="client-name">Michael Lee</div>
-              <div class="client-role">Entrepreneur</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 py-2">
-            <div class="testimonial text-center">
-              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="client-img" alt="">
-              <p>"Professional, reliable, and highly recommended."</p>
-              <div class="client-name">Emily Davis</div>
-              <div class="client-role">Project Coordinator</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 py-2">
-            <div class="testimonial text-center">
-              <img src="https://randomuser.me/api/portraits/men/41.jpg" class="client-img" alt="">
-              <p>"They delivered on time and exceeded expectations!"</p>
-              <div class="client-name">David Wilson</div>
-              <div class="client-role">Business Owner</div>
+          <div class="col-md-6">
+            <div class="contact-details">
+              <h2>GET IN TOUCH</h2>
+              <p><strong>Email:</strong> info@yourcompany.com</p>
+              <p><strong>Phone:</strong> +91 98765 43210</p>
+              <p><strong>Follow us on:</strong></p>
+              <div class="social-links">
+                <a href="https://instagram.com/yourhandle" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/yourhandle" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://x.com/yourhandle" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X">
+                </a>
+                <a href="https://linkedin.com/in/yourhandle" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-6 col-md-3 py-2">
-            <div class="testimonial text-center">
-              <img src="https://randomuser.me/api/portraits/women/23.jpg" class="client-img" alt="">
-              <p>"Truly impressed with their professionalism and creativity."</p>
-              <div class="client-name">Laura Green</div>
-              <div class="client-role">Designer</div>
+      <!-- Map below -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.790539150507!2d75.95106231500929!3d22.972009379350606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f6f9f0a6e4a9%3A0x7c93e12e444e6ee6!2sDewas%2C%20Madhya%20Pradesh%20455001%2C%20India!5e0!3m2!1sen!2sin!4v1694600000000!5m2!1sen!2sin"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <div id="testimonial" class="container pt-5 position-relative">
+      <h2 class="text-center">Testimonial</h2>
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner py-5">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row ">
+              <div class="col-6 col-md-3 py-2">
+                <div class="testimonial text-center">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" class="client-img" alt="">
+                  <p>"Absolutely amazing service. Couldn’t be happier with the results."</p>
+                  <div class="client-name">Sarah Johnson</div>
+                  <div class="client-role">Marketing Manager</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 py-2">
+                <div class="testimonial text-center">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img" alt="">
+                  <p>"The support team is fantastic. They went above and beyond!"</p>
+                  <div class="client-name">Michael Lee</div>
+                  <div class="client-role">Entrepreneur</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 py-2">
+                <div class="testimonial text-center">
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" class="client-img" alt="">
+                  <p>"Professional, reliable, and highly recommended."</p>
+                  <div class="client-name">Emily Davis</div>
+                  <div class="client-role">Project Coordinator</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 py-2">
+                <div class="testimonial text-center">
+                  <img src="https://randomuser.me/api/portraits/men/41.jpg" class="client-img" alt="">
+                  <p>"They delivered on time and exceeded expectations!"</p>
+                  <div class="client-name">David Wilson</div>
+                  <div class="client-role">Business Owner</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-6 col-md-3 py-2">
-            <div class="testimonial text-center">
-              <img src="https://randomuser.me/api/portraits/men/52.jpg" class="client-img" alt="">
-              <p>"The team was friendly, efficient, and delivered great work."</p>
-              <div class="client-name">James Carter</div>
-              <div class="client-role">Consultant</div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-6 col-md-3 py-2">
+                <div class="testimonial text-center">
+                  <img src="https://randomuser.me/api/portraits/women/23.jpg" class="client-img" alt="">
+                  <p>"Truly impressed with their professionalism and creativity."</p>
+                  <div class="client-name">Laura Green</div>
+                  <div class="client-role">Designer</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 py-2">
+                <div class="testimonial text-center">
+                  <img src="https://randomuser.me/api/portraits/men/52.jpg" class="client-img" alt="">
+                  <p>"The team was friendly, efficient, and delivered great work."</p>
+                  <div class="client-name">James Carter</div>
+                  <div class="client-role">Consultant</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 py-2">
+                <div class="testimonial text-center">
+                  <img src="https://randomuser.me/api/portraits/women/19.jpg" class="client-img" alt="">
+                  <p>"Great communication throughout the project. Highly satisfied!"</p>
+                  <div class="client-name">Olivia Brown</div>
+                  <div class="client-role">HR Manager</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 py-2">
+                <div class="testimonial text-center">
+                  <img src="https://randomuser.me/api/portraits/men/67.jpg" class="client-img" alt="">
+                  <p>"A seamless experience from start to finish. Thank you!"</p>
+                  <div class="client-name">Robert King</div>
+                  <div class="client-role">CEO</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-6 col-md-3 py-2">
-            <div class="testimonial text-center">
-              <img src="https://randomuser.me/api/portraits/women/19.jpg" class="client-img" alt="">
-              <p>"Great communication throughout the project. Highly satisfied!"</p>
-              <div class="client-name">Olivia Brown</div>
-              <div class="client-role">HR Manager</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 py-2">
-            <div class="testimonial text-center">
-              <img src="https://randomuser.me/api/portraits/men/67.jpg" class="client-img" alt="">
-              <p>"A seamless experience from start to finish. Thank you!"</p>
-              <div class="client-name">Robert King</div>
-              <div class="client-role">CEO</div>
-            </div>
-          </div>
+
         </div>
       </div>
-
     </div>
+
+    <!-- footer section start  -->
+    <div class="end"></div>
+    <!-- footer section end  -->
   </div>
-</div>
 
 
+
+  <script src="js/scritpt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    new bootstrap.Carousel('#testimonialCarousel', {
+      interval: 5000,
+      ride: 'carousel'
+    });
+  </script>
 </body>
+
 </html>
