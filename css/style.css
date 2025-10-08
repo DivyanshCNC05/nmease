@@ -134,18 +134,21 @@
 
   .section-1-h1 {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 6rem;
     padding-left: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
   }
 
   .section-1-p {
     text-align: center;
     padding-left: 1rem;
-    font-size: 0.1rem;
-    padding-top: 1rem;
-    color: #5f5e5e;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+    color: black;
+  }
+  .rounded{
+    margin-top: 2rem;
   }
 
   .service-p {
@@ -235,7 +238,7 @@
   }
 
   .section-4 {
-    background-color: #8a8a8a;
+    background-color: black;
   }
 
   .section-4-logo {
@@ -246,13 +249,14 @@
 
 
   .section-4-logo div img {
-    width: 60%;
+    width: 95%;
     aspect-ratio: 2/2;
     object-fit: contain;
   }
 
   .section-4 h2 {
     padding-top: 5rem;
+    color: #ffffff;
     text-align: center;
   }
 
@@ -330,6 +334,11 @@
 }
 .founder-name .para{
   text-align: center;
+}
+.our-img img {
+  width: 70%;
+  object-fit: contain;
+  padding-top: 20%;
 }
 
 }
@@ -452,10 +461,6 @@
 
   }
 
-
-
-
-
   .img-section-3 {
     background: url('../assets/updatedpic-2.jpg');
     background-attachment: fixed;
@@ -557,6 +562,11 @@
   max-width: 80%;
   padding-top: 20px;
 }
+.our-img img {
+  width: 100%;
+  object-fit: contain;
+  padding-top: 20%;
+}
 }
 
 .testimonial {
@@ -606,11 +616,7 @@
   border-right: 2px solid gray;
 }
 
-.our-img img {
-  width: 100%;
-  object-fit: contain;
-  padding-top: 20%;
-}
+
 
 .col-4 h3 {
   font-weight: bold;
