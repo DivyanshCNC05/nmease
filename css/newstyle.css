@@ -364,6 +364,9 @@
  width: 45%;
  padding-bottom: 2rem;
 }
+.container text{
+  padding-bottom: 0;
+}
 
 }
 
