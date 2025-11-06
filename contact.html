@@ -27,7 +27,7 @@
     #contact h1 {
       font-size: 2.5rem;
       margin-bottom: 15px;
-      color: #0e3458;
+      color: #ffffff;
       position: relative;
       display: block;
       text-align: center;
@@ -38,7 +38,7 @@
       content: "";
       width: 50px;
       height: 3px;
-      background: #0e3458;
+      background: #ffffff;
       display: block;
       margin: 8px auto 0;
       border-radius: 2px;
@@ -46,7 +46,7 @@
 
     #contact p.intro {
       font-size: 1.2rem;
-      color: #0e3458;
+      color: #ffffff;
       margin-bottom: 30px;
       padding-top: 20px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -314,6 +314,18 @@
       color: #777;
       font-size: 0.85rem;
     }
+
+
+    .hero-row {
+  height: 50vh;
+  background-image: url('./assets/contact-us-bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
   </style>
 </head>
 
@@ -322,12 +334,17 @@
     <!-- navbar section start  -->
     <nav class="test_nav "></nav>
     <!-- navbar section ends  -->
-    <section id="contact" class="container">
-      <h1>Contact Us</h1>
-      <p class="intro">Feel free to contact us anytime. We will get back to you as soon as we can!</p>
+    <section id="contact" class="container-fluid p-0">
+      
+      <div class="row hero-row mb-5">
+        <div class="row">
+          <h1>Contact Us</h1>
+        <p class="intro">Feel free to contact us anytime. We will get back to you as soon as we can!</p>
+        </div>
+      </div>
 
 
-      <div class="contact-box">
+      <div class="contact-box container">
         <div class="row g-4">
 
           <div class="col-md-6">
@@ -343,34 +360,22 @@
           <div class="col-md-6">
             <div class="contact-details">
               <h2>GET IN TOUCH</h2>
-              <p><strong>Email:</strong> info@yourcompany.com</p>
-              <p><strong>Phone:</strong> +91 98765 43210</p>
+              <p><strong>Email:</strong><a href="mailto:nmease.official@gmail.com" class="link-offset-2 link-underline link-underline-opacity-0 text-dark"> nmease.official@gmail.com</a></p>
               <p><strong>Follow us on:</strong></p>
               <div class="social-links">
                 <a href="https://instagram.com/yourhandle" target="_blank">
                   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
                 </a>
-                <a href="https://twitter.com/yourhandle" target="_blank">
-                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter">
-                </a>
-                <a href="https://x.com/yourhandle" target="_blank">
-                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X">
-                </a>
                 <a href="https://linkedin.com/in/yourhandle" target="_blank">
                   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://x.com/yourhandle" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="Youtube">
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Map below -->
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.790539150507!2d75.95106231500929!3d22.972009379350606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f6f9f0a6e4a9%3A0x7c93e12e444e6ee6!2sDewas%2C%20Madhya%20Pradesh%20455001%2C%20India!5e0!3m2!1sen!2sin!4v1694600000000!5m2!1sen!2sin"
-          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
       </div>
     </section>
 
